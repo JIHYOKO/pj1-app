@@ -3,6 +3,7 @@
 import Image from 'next/image';
 
 import * as React from 'react';
+import "tailwindcss/tailwind.css"
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {auto} from "@popperjs/core";
