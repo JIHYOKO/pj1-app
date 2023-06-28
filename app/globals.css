@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body{
+  margin: 0 auto;
+  background: #ffffff;
+  max-width: 992px;
+  padding : 20px 10px 0px 10px;
+}
+
+.greeting{
+  padding: 0px 20px 0px 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.space {
+  margin-bottom: 20px; /* 내리고자 하는 간격 설정 */
+}
+
+.image-container {
+  display: flex;
+}
+
+.left-image, .right-image {
+  flex: 1;
+}
+
+.left-image img, .right-image img {
+  width: 100%;
+  height: auto;
+}
