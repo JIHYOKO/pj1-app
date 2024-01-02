@@ -34,22 +34,17 @@ export default function Home() {
         <div className="greeting">
           <blockquote className="max-w-sm p-6 bg-gray-100 border-gray-600 rounded-bl-sm shadow-sm rounded-2xl">
             <p>
-              서로가 마주보며 다져온 사랑을
-              이제 함께 한 곳을 바라보며 걸어갈 수 있는
-              큰 사랑으로 키우고자 합니다.
-              저희 두 사람이 사랑의 이름으로 지켜나갈 수 있게
-              앞날을 축복해 주시면 감사하겠습니다.
-              [출처] [청첩장문구] 청첩장 인사말, 문구 고민 끝~! 인기있는 청첩장 문구 베스트 10|작성자 여의도더파티움
+              어쩌구저쩌구 저쩌구어쩌라구어쩌구저쩌구 저쩌구어쩌라구어쩌구저쩌구 저쩌구어쩌라구어쩌구저쩌구 저쩌구어쩌라구어쩌구저쩌구 저쩌구어쩌라구어쩌구저쩌구 저쩌구어쩌라구어쩌구저쩌구 저쩌구어쩌라구어쩌구저쩌구 저쩌구어쩌라구
             </p>
           </blockquote>
           <footer className="flex items-center gap-4 mt-4">
             <div className="flex -space-x-2 overflow-hidden">
-              <Image src="/emoji_hyo.png" alt="Next.js Logo" className="inline-block h-12 w-12 rounded-full ring-2 ring-white"  width={500} height={300}/>
-              <Image src="/emoji_hyo.png" alt="Next.js Logo" className="inline-block h-12 w-12 rounded-full ring-2 ring-white"  width={500} height={300}/>
+              <Image src="/mango01.jpg" alt="mango" className="inline-block h-12 w-12 rounded-full ring-2 ring-white"  width={500} height={300}/>
+              <Image src="/gureum02.jpg" alt="Next.js Logo" className="inline-block h-12 w-12 rounded-full ring-2 ring-white"  width={500} height={300}/>
             </div>
               <div className="font-medium">
                 <p>형준과 지효</p>
-                <p className="text-gray-300">@hj&jh</p>
+                <p className="text-gray-300">@joonandhyo</p>
               </div>
           </footer>
         </div>
@@ -292,6 +287,12 @@ export default function Home() {
         </div>
 
 
+        {/* footer */}
+        <div className="flex flex-col-reverse justify-between pt-5 pb-10">
+          <p className="text-sm text-gray-600">© Copyright 2023 Kojihyo. All rights reserved.</p>
+          <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+          </ul>
+        </div>
 
 
 
