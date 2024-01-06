@@ -13,37 +13,6 @@ import {auto} from "@popperjs/core";
 
 export default function Home() {
 
-
-  const codeElementRef = useRef(null);
-  const [copiedText, setCopiedText] = useState('');
-
-  const copyCodeToClipboard = () => {
-    alert('test');
-    const codeElement = codeElementRef.current;
-    if (codeElement) {
-      const range = document.createRange();
-      range.selectNode(codeElement);
-      window.getSelection().removeAllRanges();
-      window.getSelection().addRange(range);
-
-      try {
-        const successful = document.execCommand('copy');
-        if (successful) {
-          setCopiedText('코드를 클립보드로 복사했습니다.');
-        } else {
-          setCopiedText('코드 복사에 실패했습니다.');
-        }
-      } catch (err) {
-        console.error('복사 중 오류가 발생했습니다:', err);
-        setCopiedText('코드 복사에 실패했습니다.');
-      }
-
-      window.getSelection().removeAllRanges();
-    } else {
-      console.error('클래스명이 language-javascript인 요소를 찾을 수 없습니다.');
-    }
-  };
-
   return (
       <main className="flex min-h-screen flex-col items-center justify-between">
         <h1 className="text-4xl font-bold text-center mb-8">권형준 🤍 고지효</h1>
