@@ -41,36 +41,6 @@ export default function Home() {
     return () => clearInterval(x);
   }, []); // 빈 배열은 컴포넌트가 처음 렌더링될 때만 실행하도록 합니다.
 
-  useEffect(() => {
-    // 카카오맵 구현
-    const mapScript = document.createElement('script');
-
-    mapScript.async = true;
-    mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=ca890567457c18e421fd93cc86868d7f&autoload=false`;
-
-    document.head.appendChild(mapScript);
-
-    const onLoadKakaoMap = () => {
-      window.kakao.maps.load(() => {
-        const mapContainer = document.getElementById('map');
-        const mapOption = {
-          center: new window.kakao.maps.LatLng(37.31471634720639, 126.82791181717748), // 지도의 중심좌표
-          level: 3, // 지도의 확대 레벨
-        };
-        new window.kakao.maps.Map(mapContainer, mapOption);
-
-        // 마커
-        const map = new window.kakao.maps.Map(mapContainer, mapOption);
-        const markerPosition = new window.kakao.maps.LatLng(37.31471634720639, 126.82791181717748);
-        // 마커를 생성합니다
-        const marker = new window.kakao.maps.Marker({
-          position: markerPosition,
-        });
-      });
-    };
-    mapScript.addEventListener('load', onLoadKakaoMap);
-  }, []);
-
   const codeElementRef = useRef(null);
   const [copiedText, setCopiedText] = useState('');
 
@@ -440,40 +410,7 @@ export default function Home() {
 
 
 
-        {/* 지도 */}
-        <h3>L O C A T I O N</h3>
-        <h3>오시는 길</h3>
-        <h3>빌라드 지디 안산 8층 그랜드볼룸홀</h3>
-        <br/>
 
-        <div>
-          <div id="map" className="w-96 h-96"></div>
-        </div>
-        <br/>
-        <div>
-          <ul className="flex flex-col gap-3">
-            <li>
-              <span className="inline-block mt-0 rounded-lg font-medium text-blue-800 bg-blue-100 px-1 relative">📍 주소</span>
-              <p className="pb-4"> 경기도 안산시 단원구 광덕4로 140(고잔동 703) GD팰리스타워</p>
-            </li>
-            <li>
-              <span className="inline-block mt-0 rounded-lg font-medium text-blue-800 bg-blue-100 px-1 relative">🚗 주차안내</span>
-              <p className="pb-4"> GD팰리스타워 앞 화랑, 월드타워 주차 </p>
-            </li>
-            <li>
-              <span className="inline-block mt-0 rounded-lg font-medium text-blue-800 bg-blue-100 px-1 relative">🚍셔틀버스</span>
-              <p className="pb-4"> 삼성디지털시티 수원사업장주차장 정류장</p>
-            </li>
-            <li>
-              <span className="inline-block mt-0 rounded-lg font-medium text-blue-800 bg-blue-100 px-1 relative">🚌 버스</span>
-              <p className="pb-4"> 97번, 98번, 99-1번, 500번 버스 고잔역 뒤 정류장 하차</p>
-            </li>
-            <li>
-              <span className="inline-block mt-0 rounded-lg font-medium text-blue-800 bg-blue-100 px-1 relative">🚊 지하철</span>
-              <p> 4호선 고잔역 하차 2번출구 왼쪽대로변 200m 직진 </p>
-            </li>
-          </ul>
-        </div>
 
         <br/><br/>
 
