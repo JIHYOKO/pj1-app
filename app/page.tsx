@@ -6,9 +6,7 @@ import { useEffect } from 'react';
 import { useRef, useState } from 'react';
 import * as React from 'react';
 import "tailwindcss/tailwind.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import KakaoMap from "./kakaoMap";
-import { Carousel } from 'react-responsive-carousel';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {auto} from "@popperjs/core";
@@ -434,31 +432,6 @@ export default function Home() {
           </div>
         </div>
         <br/><br/>
-
-        {/* 사진 */}
-        <Carousel>
-          <div>
-            <Image src="/photo1.jpg" alt="photo3" width={400} height={300}/>
-          </div>
-          <div>
-            <Image src="/photo2.jpg" alt="photo3" width={400} height={300}/>
-          </div>
-          <div>
-            <Image src="/photo3.jpg" alt="photo3" width={400} height={300}/>
-          </div>
-          <div>
-            <Image src="/photo4.jpg" alt="photo3" width={400} height={300}/>
-          </div>
-          <div>
-            <Image src="/photo5.jpg" alt="photo3" width={400} height={300}/>
-          </div>
-          <div>
-            <Image src="/photo6.jpg" alt="photo3" width={400} height={300}/>
-          </div>
-          <div>
-            <Image src="/photo7.jpg" alt="photo3" width={400} height={300}/>
-          </div>
-        </Carousel>
 
         <h3 className="flex items-center w-full">
           <span className="flex-grow bg-gray-200 rounded h-1"></span>
