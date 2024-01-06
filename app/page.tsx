@@ -66,7 +66,6 @@ export default function Home() {
         const marker = new window.kakao.maps.Marker({
           position: markerPosition,
         });
-        marker.setMap(map);
       });
     };
     mapScript.addEventListener('load', onLoadKakaoMap);
