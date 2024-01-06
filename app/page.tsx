@@ -12,64 +12,6 @@ import {auto} from "@popperjs/core";
 
 export default function Home() {
 
-  useEffect(() => {
-    // 카운트다운 구현
-    var countDownDate = new Date('Feb 17, 2024 13:00:00').getTime();
-
-    // 1초마다 카운트다운 업데이트
-    var x = setInterval(function () {
-      // 현재 시간 구하기
-      var now = new Date().getTime();
-
-      // 남은 시간 계산
-      var distance = countDownDate - now;
-
-      // 남은 시간을 일, 시간, 분, 초로 계산
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // React 컴포넌트 내의 요소에 결과를 표시
-      document.getElementById('days').textContent = days + '일';
-      document.getElementById('hours').textContent = hours + '시간';
-      document.getElementById('minutes').textContent = minutes + '분';
-      document.getElementById('seconds').textContent = seconds + '초';
-    }, 1000);
-
-    // 컴포넌트가 사라질 때 interval 정리
-    return () => clearInterval(x);
-  }, []); // 빈 배열은 컴포넌트가 처음 렌더링될 때만 실행하도록 합니다.
-
-  const codeElementRef = useRef(null);
-  const [copiedText, setCopiedText] = useState('');
-
-  const copyCodeToClipboard = () => {
-    alert('test');
-    const codeElement = codeElementRef.current;
-    if (codeElement) {
-      const range = document.createRange();
-      range.selectNode(codeElement);
-      window.getSelection().removeAllRanges();
-      window.getSelection().addRange(range);
-
-      try {
-        const successful = document.execCommand('copy');
-        if (successful) {
-          setCopiedText('코드를 클립보드로 복사했습니다.');
-        } else {
-          setCopiedText('코드 복사에 실패했습니다.');
-        }
-      } catch (err) {
-        console.error('복사 중 오류가 발생했습니다:', err);
-        setCopiedText('코드 복사에 실패했습니다.');
-      }
-
-      window.getSelection().removeAllRanges();
-    } else {
-      console.error('클래스명이 language-javascript인 요소를 찾을 수 없습니다.');
-    }
-  };
 
   return (
       <main className="flex min-h-screen flex-col items-center justify-between">
@@ -373,41 +315,6 @@ export default function Home() {
           </div>
         </div>
         <br/>
-
-        {/* 카운트 다운 */}
-        <div>
-          <div className="max-w-lg mx-auto bg-white rounded-lg overflow-hidden">
-            <div className="py-4 px-6">
-              <p className="text-center">형준 ❤ 지효의 결혼식까지</p>
-            </div>
-
-            <div className="py-4 px-4 border border-yellow-400 rounded-lg bg-yellow-100/50 rounded-ful">
-              <div className="flex flex-wrap gap-4 justify-center items-center">
-                <div className="px-3 py-2">
-                  <div id="days" className="font-bold font-mono text-xl text-gray-800"></div>
-                </div>
-                <div className="px-3 py-2">
-                  <div id="hours" className="font-bold font-mono text-xl text-gray-800"></div>
-                </div>
-                <div className="px-3 py-2">
-                  <div id="minutes" className="font-bold font-mono text-xl text-gray-800"></div>
-                </div>
-                <div className="px-3 py-2">
-                  <div id="seconds" className="font-bold font-mono text-xl text-gray-800"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br/><br/>
-
-        <h3 className="flex items-center w-full">
-          <span className="flex-grow bg-gray-200 rounded h-1"></span>
-          <span className="flex-grow bg-gray-200 rounded h-1"></span>
-        </h3>
-
-        <br/><br/>
-
 
 
 
