@@ -414,7 +414,7 @@ export default function Home() {
               <p className="text-center">형준 ❤ 지효의 결혼식까지</p>
             </div>
 
-            <div className="py-4 px-4 border border-yellow-400 rounded-lg bg-yellow-100/50 rounded-ful">
+            <div className="py-4 px-4 border border-yellow-400 rounded-lg bg-yellow-100 rounded-full">
               <div className="flex flex-wrap gap-4 justify-center items-center">
                 <div className="px-3 py-2">
                   <div id="days" className="font-bold font-mono text-xl text-gray-800"></div>
