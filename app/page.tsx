@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import { useRef, useState } from 'react';
 import * as React from 'react';
 import "tailwindcss/tailwind.css";
-import KakaoMap from "./kakaoMap";
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {auto} from "@popperjs/core";
