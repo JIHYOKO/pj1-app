@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 
-import { useEffect } from 'react';
 import { useRef, useState } from 'react';
 import * as React from 'react';
 import "tailwindcss/tailwind.css";
@@ -14,36 +13,6 @@ import {auto} from "@popperjs/core";
 
 export default function Home() {
 
-  useEffect(() => {
-    // 카카오맵 구현
-    const mapScript = document.createElement('script');
-
-    mapScript.async = true;
-    mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=ca890567457c18e421fd93cc86868d7f&autoload=false`;
-
-    document.head.appendChild(mapScript);
-
-    const onLoadKakaoMap = () => {
-      window.kakao.maps.load(() => {
-        const mapContainer = document.getElementById('map');
-        const mapOption = {
-          center: new window.kakao.maps.LatLng(37.31471634720639, 126.82791181717748), // 지도의 중심좌표
-          level: 3, // 지도의 확대 레벨
-        };
-        new window.kakao.maps.Map(mapContainer, mapOption);
-
-        // 마커
-        const map = new window.kakao.maps.Map(mapContainer, mapOption);
-        const markerPosition = new window.kakao.maps.LatLng(37.31471634720639, 126.82791181717748);
-        // 마커를 생성합니다
-        const marker = new window.kakao.maps.Marker({
-          position: markerPosition,
-        });
-        marker.setMap(map);
-      });
-    };
-    mapScript.addEventListener('load', onLoadKakaoMap);
-  }, []);
 
   const codeElementRef = useRef(null);
   const [copiedText, setCopiedText] = useState('');
