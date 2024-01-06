@@ -33,3 +33,14 @@ body{
   width: 100%;
   height: auto;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+summary {
+  display: block; /* summary 요소를 블록 요소로 표시합니다. */
+  width: 300px; /* 원하는 너비로 지정합니다. */
+  /* 다른 스타일링 속성들도 추가할 수 있습니다. */
+}
