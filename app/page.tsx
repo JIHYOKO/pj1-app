@@ -33,10 +33,10 @@ export default function Home() {
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // React 컴포넌트 내의 요소에 결과를 표시
-      document.getElementById('days').textContent = days + '일';
-      document.getElementById('hours').textContent = hours + '시간';
-      document.getElementById('minutes').textContent = minutes + '분';
-      document.getElementById('seconds').textContent = seconds + '초';
+      window.document.getElementById('days').textContent = days + '일';
+      window.document.getElementById('hours').textContent = hours + '시간';
+      window.document.getElementById('minutes').textContent = minutes + '분';
+      window.document.getElementById('seconds').textContent = seconds + '초';
     }, 1000);
 
     // 컴포넌트가 사라질 때 interval 정리
@@ -68,6 +68,7 @@ export default function Home() {
         const marker = new window.kakao.maps.Marker({
           position: markerPosition,
         });
+        marker.setMap(map);
       });
     };
     mapScript.addEventListener('load', onLoadKakaoMap);
